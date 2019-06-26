@@ -8,20 +8,13 @@ const functions = require('firebase-functions');
 // });
 
 exports.teste = functions.https.onCall((data, context) => {
-    return "Functionou fela da puta";
+    return "Functionou";
 });
 
 exports.sum = functions.https.onCall((data, context) => {
     var number1 = data.number1 || 0;
     var number2 = data.number2 || 0;
     return number1 + number2;
-});
-
-exports.testingGet = functions.https.onRequest((req, res) => {
-    res.status(200).json({
-        description: "chupa meu pau!",
-        msg: "pequenino!"
-    });
 });
 
 exports.upOneNumber = functions.firestore
